@@ -15,9 +15,9 @@
 #include <vector>
 #include <set>
 
-namespace Ui {
-class new_grammar;
-}
+QT_BEGIN_NAMESPACE
+namespace Ui { class new_grammar; }
+QT_END_NAMESPACE
 
 class new_grammar : public QDialog
 {

@@ -22,9 +22,9 @@
 #include "pd_to_gr.h"
 #include "gr_to_pd.h"
 
-namespace Ui {
-class MainWindow;
-}
+QT_BEGIN_NAMESPACE
+namespace Ui { class MainWindow; }
+QT_END_NAMESPACE
 
 class MainWindow : public QMainWindow
 {

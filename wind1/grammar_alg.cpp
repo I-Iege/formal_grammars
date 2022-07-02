@@ -1,4 +1,5 @@
 #include "grammar_alg.h"
+#include <string>
 
 grammar_alg::grammar_alg()
 {
