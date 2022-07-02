@@ -1,5 +1,4 @@
-#ifndef GREIBACH_H
-#define GREIBACH_H
+#pragma once
 
 #include "grammar_alg.h"
 #include "grammar.h"
@@ -31,6 +30,3 @@ private:
 	void reduction();
 };
 
-
-
-#endif

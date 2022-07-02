@@ -1,5 +1,4 @@
-#ifndef SIGN_H
-#define SIGN_H
+#pragma once
 
 #include <iostream>
 #include <deque>
@@ -14,8 +13,8 @@
 class sign
 {
 	public:
-	    	sign();
-		sign(const char* name,const bool& term=true);
+        sign();
+        sign(const char* name,const bool& term=true);
 		sign(const std::string& name,const bool& term=true);
 		sign(const sign& a);
 		std::string to_string() const;
@@ -35,4 +34,3 @@ class sign
 		bool t;
 };
 
-#endif

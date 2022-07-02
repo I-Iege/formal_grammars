@@ -1,5 +1,5 @@
-#ifndef PUSH_DOWN_H
-#define PUSH_DOWN_H
+#pragma once
+
 #include "sign_list.h"
 #include "move.h"
 #include "result.h"
@@ -14,5 +14,3 @@ struct push_down
     sign Q0;
     std::set<sign> H;
 };
-
-#endif // PUSH_DOWN_H

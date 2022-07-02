@@ -1,5 +1,5 @@
-#ifndef GRAMMAR_ALG_H
-#define GRAMMAR_ALG_H
+#pragma once
+
 #include <iostream>
 #include <vector>
 
@@ -20,4 +20,4 @@ int alg_it;
 std::vector<std::string> info;
 
 };
-#endif // GRAMMAR_ALG_H
+

@@ -1,5 +1,5 @@
-#ifndef MOVE_H
-#define MOVE_H
+#pragma once
+
 #include "sign.h"
 
 struct move
@@ -47,5 +47,3 @@ struct move
 
 };
 
-
-#endif // MOVE_H

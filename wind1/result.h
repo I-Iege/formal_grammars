@@ -1,5 +1,5 @@
-#ifndef RESULT_H
-#define RESULT_H
+#pragma once
+
 #include "sign_list.h"
 
 struct result
@@ -14,5 +14,3 @@ struct result
         return str;
     }
 };
-
-#endif // RESULT_H

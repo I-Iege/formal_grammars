@@ -1,8 +1,9 @@
-#ifndef PD_TO_GR_H
-#define PD_TO_GR_H
+#pragma once
+
 #include "grammar_alg.h"
 #include "push_down.h"
 #include "grammar.h"
+
 class pd_to_gr :public grammar_alg
 {
 
@@ -15,4 +16,3 @@ private:
     std::vector<grammar> gr;
 
 };
-#endif // PD_TO_GR_H

@@ -1,5 +1,5 @@
-#ifndef EARLY_ALG_H
-#define EARLY_ALG_H
+#pragma once
+
 #include "grammar_alg.h"
 #include "grammar.h"
 
@@ -34,10 +34,5 @@ std::vector<std::vector<std::set<s_rule> > > table;
 std::vector<std::vector<std::vector<std::set<s_rule> > > >table_vec;
 std::vector<early_state> state;
 
-
-
-
-
-
 };
-#endif
+

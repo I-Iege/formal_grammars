@@ -1,5 +1,4 @@
-#ifndef S_RULE_H
-#define S_RULE_H
+#pragma once
 
 #include "sign_list.h"
 
@@ -21,7 +20,3 @@ class s_rule : public sign_list
 	std::string to_string() const;
 	friend std::ostream& operator<<(std::ostream &s,const s_rule &a);
 };
-
-
-
-#endif

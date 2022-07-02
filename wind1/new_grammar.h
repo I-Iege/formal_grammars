@@ -1,5 +1,4 @@
-#ifndef NEW_GRAMMAR_H
-#define NEW_GRAMMAR_H
+#pragma once
 
 #include <QDialog>
 #include <QTextEdit>
@@ -54,4 +53,3 @@ private:
 
 };
 
-#endif // NEW_GRAMMAR_H

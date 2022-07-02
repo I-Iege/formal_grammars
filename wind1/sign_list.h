@@ -1,5 +1,4 @@
-#ifndef sign_list_H
-#define sign_list_H
+#pragma once
 
 #include "sign.h"
 
@@ -38,4 +37,4 @@ public:
 	
 };
 
-#endif
+

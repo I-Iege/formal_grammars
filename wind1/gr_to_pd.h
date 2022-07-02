@@ -1,5 +1,5 @@
-#ifndef GR_T0_PD_H
-#define GR_T0_PD_H
+#pragma once
+
 #include "grammar_alg.h"
 #include "push_down.h"
 #include "grammar.h"
@@ -22,4 +22,3 @@ class gr_to_pd : public grammar_alg
 
 	
 };
-#endif // GR_T0_PD_H

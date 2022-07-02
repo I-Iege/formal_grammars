@@ -1,5 +1,5 @@
-#ifndef GRAMMAR_H
-#define GRAMMAR_H
+#pragma once
+
 #include "s_rule.h"
 #include <exception>
 #include <set>
@@ -61,5 +61,3 @@ private:
     void substitute_pd_e_rules();
 	
 };
-
-#endif
