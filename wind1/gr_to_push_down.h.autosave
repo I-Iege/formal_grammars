@@ -1,0 +1,43 @@
+#ifndef GR_TO_PUSH_DOWN_H
+#define GR_TO_PUSH_DOWN_H
+#include "grammar_alg.h"
+#include "move.h"
+#include "result.h"
+#include "sign_list.h"
+#include "grammar.h"
+#include <map>
+#include <list>
+#include <tuple>
+class gr_to_push_down : public grammar_alg
+{
+	public:
+    gr_to_push_down(const char* fname);
+    gr_to_push_down(const grammar& g);
+    grammar to_grammar() const;
+
+    grammar get_grammar() const;
+    void next_grammar();
+    void prev_grammar();
+    std::string grammar_progress() const;
+
+    //inherited from grammar_alg
+    std::string to_string() const;
+
+    std::string get_moves() const;
+
+    private:
+    int gr_it;
+    void to_empty_stack_pd();
+    mutable std::vector<grammar> grammar_from_pd;
+    std::vector<std::string> moves;
+    std::vector<std::pair<int,int> > select() const;
+    std::map<move,std::list<result> > M;
+	sign_list Z;
+	sign_list K;
+	sign_list T;
+    sign Z0;
+    sign Q0;
+    std::set<sign> H;
+	
+};
+#endif // GR_TO_PUSH_DOWN_H
