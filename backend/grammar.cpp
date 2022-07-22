@@ -224,9 +224,9 @@ grammar grammar::chomsky() const
                 sign_list sl;
                     if(rule!=g.P[N[j]].end())
                     {
-                        sl.push_back(*(rule->end()-1));
+                        sl.push_back(rule->back());
                         rule->pop_back();
-                        sl.push_front(*(rule->end()-1));
+                        sl.push_front(rule->back());
                         rule->pop_back();
 
                     }
@@ -988,7 +988,7 @@ void grammar::substitute_pd_e_rules()
             {
                 if(e_rule_set.count(*it3)>0)
                 {
-                    it3=it2->erase(it3);
+                    it3=it2->erase(*it3);
                 }
                 else
                 {

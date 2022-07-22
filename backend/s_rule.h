@@ -2,12 +2,13 @@
 
 #include "sign_list.h"
 
-class s_rule : public sign_list
+class s_rule
 {
 	
 	sign n;
 	int dot;
-	
+    sign_list r;
+
 	public:
 	
 	s_rule(sign k,const sign_list& a,int n);
@@ -19,4 +20,9 @@ class s_rule : public sign_list
 	sign get_n() const;
 	std::string to_string() const;
 	friend std::ostream& operator<<(std::ostream &s,const s_rule &a);
+
+
+    sign& operator[](const int &i);
+    const sign& operator[](const int &i) const;
+    int size() const;
 };

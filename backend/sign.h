@@ -24,13 +24,16 @@ class sign
 		void gen_sign();
 		sign& operator=(const char*);
 		sign& operator=(const sign&);
-		bool friend operator==(const sign&,const sign&);
-		bool friend operator!=(const sign&,const sign&);
+        friend std::ostream& operator<<(std::ostream &s,sign a);
+
+        bool friend operator==(const sign&, const sign&);
+        bool friend operator!=(const sign&,const sign&);
 		bool friend operator<(const sign&,const sign&);
-		bool friend operator>(const sign&,const sign&);
-		friend std::ostream& operator<<(std::ostream &s,sign a);
-	private:
+        bool friend operator>(const sign&,const sign&);
+
+
 		std::string str;
+    private:
 		bool t;
 };
 

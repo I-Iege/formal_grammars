@@ -1,5 +1,5 @@
 
-set(TARGET wind1)
+set(TARGET ui)
 
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
 
@@ -19,7 +19,7 @@ qt_add_executable(${TARGET} MANUAL_FINALIZATION ${SRC})
 
 target_include_directories(${TARGET} PUBLIC .)
 
-target_link_libraries(${TARGET} PUBLIC Qt6::Core Qt6::Widgets)
+target_link_libraries(${TARGET} PUBLIC backend Qt6::Core Qt6::Widgets)
 
 set_target_properties(${TARGET} PROPERTIES
     MACOSX_BUNDLE_GUI_IDENTIFIER my.example.com

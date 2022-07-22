@@ -4,7 +4,7 @@ cmake_minimum_required(VERSION 3.5)
 project (wind1)
 
 #no option for latest and this will force 20
-set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
 
 #set(CMAKE_PREFIX_PATH C:/Qt/6.3.1/mingw_64)
@@ -22,7 +22,9 @@ enable_testing()
 
 
 add_subdirectory(googletest)
-add_subdirectory(wind1)
+add_subdirectory(backend)
+add_subdirectory(ui)
+add_subdirectory(unittests)
 
 if(WIN32)
     set_target_properties(gmock gmock_main gtest gtest_main PROPERTIES FOLDER Gtest)

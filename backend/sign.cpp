@@ -59,26 +59,25 @@ sign& sign::operator=(const sign& a)
 	this->t=a.t;
 	return *this;
 }
+
 bool operator==(const sign& a,const sign& b)
 {
- return a.str==b.str;
+    return a.str==b.str;
 }
-
-
 
 bool operator!=(const sign& a,const sign& b)
 {
-return !(a.str==b.str);
+    return !(a.str==b.str);
 }
 
 bool operator<(const sign& a,const sign& b)
 {
- return a.str<b.str;
+    return a.str<b.str;
 }
 
 bool operator>(const sign& a,const sign& b)
 {
- return a.str>b.str;
+    return a.str>b.str;
 }
 
 std::ostream& operator<<(std::ostream &s,sign a)
