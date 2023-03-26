@@ -1,5 +1,12 @@
-#include "mainwindow.h"
 
+#ifdef WIN32
+
+#include <QtPlugin>
+Q_IMPORT_PLUGIN (QWindowsIntegrationPlugin)
+
+#endif
+
+#include "mainwindow.h"
 
 int main(int argc, char *argv[])
 {

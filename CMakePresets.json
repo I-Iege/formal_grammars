@@ -1,0 +1,191 @@
+{
+	"version": 3,
+	"cmakeMinimumRequired": {
+		"major": 3,
+		"minor": 22,
+		"patch": 0
+	},
+	"configurePresets": [{
+			"name": "gcc-release",
+			"binaryDir": "${sourceDir}/build/${presetName}",
+			"cacheVariables": {
+				"CMAKE_CXX_COMPILER": "g++",
+				"CMAKE_C_COMPILER": "gcc",
+				"CMAKE_BUILD_TYPE": "Release",
+				"CMAKE_MODULE_PATH": "${sourceDir}/build/${presetName}",
+				"CMAKE_PREFIX_PATH": "${sourceDir}/build/${presetName}"
+			}
+		},
+		{
+			"name": "gcc-debug",
+			"binaryDir": "${sourceDir}/build/${presetName}",
+			"cacheVariables": {
+				"CMAKE_CXX_COMPILER": "g++",
+				"CMAKE_C_COMPILER": "gcc",
+				"CMAKE_BUILD_TYPE": "Debug",
+				"CMAKE_MODULE_PATH": "${sourceDir}/build/${presetName}",
+				"CMAKE_PREFIX_PATH": "${sourceDir}/build/${presetName}"
+			}
+		},
+		{
+			"name": "clang-release",
+			"binaryDir": "${sourceDir}/build/${presetName}",
+			"cacheVariables": {
+				"CMAKE_CXX_COMPILER": "clang++",
+				"CMAKE_C_COMPILER": "clang",
+				"CMAKE_BUILD_TYPE": "Release",
+				"CMAKE_MODULE_PATH": "${sourceDir}/build/${presetName}",
+				"CMAKE_PREFIX_PATH": "${sourceDir}/build/${presetName}"
+			}
+		},
+		{
+			"name": "clang-debug",
+			"binaryDir": "${sourceDir}/build/${presetName}",
+			"cacheVariables": {
+				"CMAKE_CXX_COMPILER": "clang++",
+				"CMAKE_C_COMPILER": "clang",
+				"CMAKE_BUILD_TYPE": "Debug",
+				"CMAKE_MODULE_PATH": "${sourceDir}/build/${presetName}",
+				"CMAKE_PREFIX_PATH": "${sourceDir}/build/${presetName}"
+			}
+		},
+		{
+			"name": "vs2019-release",
+			"binaryDir": "${sourceDir}/build/${presetName}",
+			"generator": "Visual Studio 16 2019",
+			"architecture": {
+				"value": "x64"
+			},
+			"cacheVariables": {
+				"CMAKE_BUILD_TYPE": "Release",
+				"CMAKE_MODULE_PATH": "${sourceDir}/build/${presetName}",
+				"CMAKE_PREFIX_PATH": "${sourceDir}/build/${presetName}",
+				"BUILD_SHARED_RUNTIME": "TRUE"
+			}
+		},
+		{
+			"name": "vs2019-debug",
+			"binaryDir": "${sourceDir}/build/${presetName}",
+			"generator": "Visual Studio 16 2019",
+			"architecture": {
+				"value": "x64"
+			},
+			"cacheVariables": {
+				"CMAKE_BUILD_TYPE": "Debug",
+				"CMAKE_MODULE_PATH": "${sourceDir}/build/${presetName}",
+				"CMAKE_PREFIX_PATH": "${sourceDir}/build/${presetName}",
+				"BUILD_SHARED_RUNTIME": "TRUE"
+			}
+		},
+		{
+			"name": "vs2022-release",
+			"binaryDir": "${sourceDir}/build/${presetName}",
+			"generator": "Visual Studio 17 2022",
+			"architecture": {
+				"value": "x64"
+			},
+			"cacheVariables": {
+				"CMAKE_BUILD_TYPE": "Release",
+				"CMAKE_MODULE_PATH": "${sourceDir}/build/${presetName}",
+				"CMAKE_PREFIX_PATH": "${sourceDir}/build/${presetName}",
+				"BUILD_SHARED_RUNTIME": "TRUE"
+			}
+		},
+		{
+			"name": "vs2022-debug",
+			"binaryDir": "${sourceDir}/build/${presetName}",
+			"generator": "Visual Studio 17 2022",
+			"architecture": {
+				"value": "x64"
+			},
+			"cacheVariables": {
+				"CMAKE_BUILD_TYPE": "Debug",
+				"CMAKE_MODULE_PATH": "${sourceDir}/build/${presetName}",
+				"CMAKE_PREFIX_PATH": "${sourceDir}/build/${presetName}",
+				"BUILD_SHARED_RUNTIME": "TRUE"
+			}
+		}
+	],
+	"buildPresets": [{
+			"name": "gcc-release",
+			"configurePreset": "gcc-release",
+			"configuration": "Release"
+		},
+		{
+			"name": "gcc-debug",
+			"configurePreset": "gcc-debug",
+			"configuration": "Debug"
+		},
+		{
+			"name": "clang-release",
+			"configurePreset": "clang-release",
+			"configuration": "Release"
+		},
+		{
+			"name": "clang-debug",
+			"configurePreset": "clang-debug",
+			"configuration": "Debug"
+		},
+		{
+			"name": "vs2019-release",
+			"configurePreset": "vs2019-release",
+			"configuration": "Release"
+		},
+		{
+			"name": "vs2019-debug",
+			"configurePreset": "vs2019-debug",
+			"configuration": "Debug"
+		},
+		{
+			"name": "vs2022-release",
+			"configurePreset": "vs2022-release",
+			"configuration": "Release"
+		},
+		{
+			"name": "vs2022-debug",
+			"configurePreset": "vs2022-debug",
+			"configuration": "Debug"
+		}
+	],
+	"testPresets": [{
+			"name": "gcc-release",
+			"configurePreset": "gcc-release",
+			"configuration": "Release"
+		},
+		{
+			"name": "gcc-debug",
+			"configurePreset": "gcc-debug",
+			"configuration": "Debug"
+		},
+		{
+			"name": "clang-release",
+			"configurePreset": "clang-release",
+			"configuration": "Release"
+		},
+		{
+			"name": "clang-debug",
+			"configurePreset": "clang-debug",
+			"configuration": "Debug"
+		},
+		{
+			"name": "vs2019-release",
+			"configurePreset": "vs2019-release",
+			"configuration": "Release"
+		},
+		{
+			"name": "vs2019-debug",
+			"configurePreset": "vs2019-debug",
+			"configuration": "Debug"
+		},
+		{
+			"name": "vs2022-release",
+			"configurePreset": "vs2022-release",
+			"configuration": "Release"
+		},
+		{
+			"name": "vs2022-debug",
+			"configurePreset": "vs2022-debug",
+			"configuration": "Debug"
+		}
+	]
+}

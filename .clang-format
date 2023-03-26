@@ -1,0 +1,47 @@
+# Requires clang-format >=10
+
+---
+BasedOnStyle: Microsoft
+---
+Language: Cpp
+Standard: c++20
+Cpp11BracedListStyle: true
+
+ColumnLimit: 120
+
+AccessModifierOffset: -4
+IndentPPDirectives: BeforeHash
+IndentWidth: 4
+NamespaceIndentation: None
+UseTab: Never
+
+BreakBeforeBraces: Custom
+BreakConstructorInitializers: BeforeComma
+BreakBeforeBinaryOperators: All
+BraceWrapping:
+  AfterCaseLabel:        true
+  AfterClass:            true
+  AfterControlStatement: Always
+  AfterEnum:             true
+  AfterExternBlock:      true
+  AfterFunction:         true
+  AfterNamespace:        false
+  AfterObjCDeclaration:  true
+  AfterStruct:           true
+  AfterUnion:            true
+  BeforeCatch:           true
+  BeforeElse:            true
+  BeforeLambdaBody:      false
+  BeforeWhile:           false
+  IndentBraces:          false
+  SplitEmptyFunction:    true
+  SplitEmptyNamespace:   false
+  SplitEmptyRecord:      true
+
+AllowShortFunctionsOnASingleLine: All
+BinPackParameters: false
+FixNamespaceComments: true
+PointerAlignment: Left
+SortIncludes: false
+SpaceBeforeParens: ControlStatements
+---

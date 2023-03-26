@@ -1,11 +1,7 @@
 
 set(TARGET ui)
 
-set(CMAKE_INCLUDE_CURRENT_DIR ON)
-
-set(CMAKE_AUTOMOC ON)
-set(CMAKE_AUTOUIC ON)
-set(CMAKE_AUTORCC ON)
+qt_standard_project_setup()
 
 
 file(GLOB SRC
@@ -19,14 +15,27 @@ qt_add_executable(${TARGET} MANUAL_FINALIZATION ${SRC})
 
 target_include_directories(${TARGET} PUBLIC .)
 
-target_link_libraries(${TARGET} PUBLIC backend Qt6::Core Qt6::Widgets)
-
-set_target_properties(${TARGET} PROPERTIES
-    MACOSX_BUNDLE_GUI_IDENTIFIER my.example.com
-    MACOSX_BUNDLE_BUNDLE_VERSION 6.5
-    MACOSX_BUNDLE_SHORT_VERSION_STRING 6.5
-    MACOSX_BUNDLE TRUE
-    WIN32_EXECUTABLE TRUE
+target_link_libraries(${TARGET} PUBLIC 
+    backend 
+    Qt6::Core 
+    Qt6::Widgets 
 )
 
-qt_finalize_target(${TARGET})
+if(${CMAKE_SYSTEM_NAME} STREQUAL Windows)
+
+target_link_libraries(${TARGET} PUBLIC 
+    Qt6::QWindowsIntegrationPlugin
+    Shcore.lib
+    D3d9.lib
+)
+
+qt_import_plugins(${TARGET}
+   INCLUDE Qt6::QWindowsIntegrationPlugin Qt6::QMinimalIntegrationPlugin
+)
+
+endif()
+
+set_target_properties(${TARGET} PROPERTIES
+    WIN32_EXECUTABLE ON
+    MACOSX_BUNDLE ON
+)
