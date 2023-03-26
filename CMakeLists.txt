@@ -17,20 +17,12 @@ if (WIN32)
     #set_property(GLOBAL PROPERTY USE_FOLDERS ON)
 endif (WIN32)
 
-
 find_package(Qt6 REQUIRED COMPONENTS Core Widgets)
-qt_standard_project_setup()
+
 enable_testing()
 
-
-add_subdirectory(googletest)
 add_subdirectory(backend)
 add_subdirectory(ui)
 add_subdirectory(unittests)
-
-if(WIN32)
-    set_target_properties(gmock gmock_main gtest gtest_main PROPERTIES FOLDER Gtest)
-endif(WIN32)
-
 
 

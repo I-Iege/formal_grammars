@@ -10,6 +10,7 @@ class Package(ConanFile):
     
     def requirements(self):
         self.requires("qt/6.4.2")
+        self.requires("gtest/1.13.0")
     
     def build(self):
         cmake = CMake(self)
