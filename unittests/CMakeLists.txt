@@ -2,7 +2,7 @@ set(TARGET unittest)
 
 file(GLOB TARGET_SRC CONFIGURE_DEPENDS "*.h" "*.cpp")
 
-find_package(Gtest)
+find_package(GTest REQUIRED)
 
 add_executable(${TARGET}
     ${TARGET_SRC}
