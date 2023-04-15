@@ -2,7 +2,7 @@
 #include "grammar.h"
 #include "greibach.h"
 #include <utility>
-TEST(TEST_GREIBACH_ALG, greibach1) 
+TEST(TEST_GREIBACH_ALG, greibach1)
 {
     grammar g("../../../../input/t2.txt");
     grammar g2 = {{

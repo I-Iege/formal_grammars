@@ -1,7 +1,7 @@
 #include <gtest/gtest.h>
 #include "s_rule.h"
 
-TEST(TEST_S_RULE, srule1) 
+TEST(TEST_S_RULE, srule1)
 {
     sign s("S", false);
     sign_list signList1 = {s, s};
