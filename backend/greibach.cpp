@@ -12,8 +12,8 @@ greibach::greibach(const grammar& gr)
     e_left_recursion(); //eliminate A->AX rules
     num=current.make_sort();
     sort_n();             //eliminate Ai->Aj i>j rules
-  /*  substitute_all();   //substitute non-terminals
-    reduction();    //leave the unused rules*/
+    substitute_all();   //substitute non-terminals
+    reduction();    //leave the unused rules
     info.push_back("end");
     state.push_back(END);
 
@@ -58,11 +58,15 @@ std::string greibach::sequence() const
     }
     return str;
 }
-const grammar& greibach::get_grammar()const
+const grammar& greibach::get_grammar() const
 {
     return g[alg_it];
 }
-		 
+		
+const grammar& greibach::get_result() const
+{ 
+    return g.back(); 
+}
 
 void greibach::eliminate_t()
 {

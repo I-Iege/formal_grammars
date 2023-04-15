@@ -16,7 +16,9 @@ public:
 	std::string to_string() const;
 
     greibach_state show_state() const;
-	const grammar& get_grammar()const;
+	const grammar& get_grammar() const;
+    const grammar& get_result() const;
+
 private:	
 	std::vector<grammar> g;
     grammar current;

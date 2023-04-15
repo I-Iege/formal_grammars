@@ -18,7 +18,7 @@ class s_rule
 	sign get_n() const;
 	std::string to_string() const;
 
-    auto operator<=>(const s_rule&) const = default;
+    constexpr auto operator<=>(const s_rule&) const = default;
 
 
 	friend std::ostream& operator<<(std::ostream &s,const s_rule &a);

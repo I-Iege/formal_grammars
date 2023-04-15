@@ -1,0 +1,9 @@
+S
+ S A D E P H
+ a b c + ( )
+S  a| b| c| ( S E| H a| H b| H c| H ( S E| a P| b P| c P| ( S E P| H a P| H b P| H c P| H ( S E P|
+A  a| b| c| E S (| a H| b H| c H| E S ( H|
+D  (|
+E  )|
+P  + A| + A P|
+H  a| b| c| a H| b H| c H| ) S D| ) S D H|

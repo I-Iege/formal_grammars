@@ -34,6 +34,9 @@ public:
 	void to_file(const std::string &fname) const;
     void find_derivables();
     void rename();
+
+    constexpr auto operator<=>(const grammar& a) const = default;
+
 private:
 
 	sign_list N;

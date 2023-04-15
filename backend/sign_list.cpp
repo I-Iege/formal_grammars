@@ -25,10 +25,11 @@ void sign_list::push_front(const sign_list &a)
 
 sign_list::iterator sign_list::erase(const sign &a)
 {
+    
     auto it=find(*this,a);
     if(it!=end())
 	{
-        it=erase(*it);
+       it = std::deque<sign>::erase(it);
 	}
 	return it;
 }
