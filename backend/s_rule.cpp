@@ -7,60 +7,6 @@ s_rule::s_rule(sign k,const sign_list& a,int n)
 {
 }
 
-
-bool operator<(const s_rule& a, const s_rule& b)
-{
-	if(a.n!=b.n)
-	{
-        return a.n<b.n;
-	}
-	else if(a.dot!=b.dot)
-	{
-		return a.dot<b.dot;
-	}
-	else
-	{
-        int i;
-        for(i=0;(int)a.r.size()>i && (int)b.r.size()>i && a.r[i]==b.r[i];++i);
-        if(a.r.size()==i)
-		{
-            if(b.r.size()==i)
-			{
-				return false;
-			}
-			else
-			{
-				return true;
-			}
-		}
-        else if(b.r.size()==i)
-		{
-			return false;
-		}
-		else
-		{
-            return a.r[i]<b.r[i];
-		}
-	}	
-}
-
-bool operator==(const s_rule& a, const s_rule& b)
-{
-    if(  a.r ==b.r && a.n==b.n && a.dot==b.dot)
-	{
-		return true;
-	}
-	else
-	{
-		return false;
-	}
-}
-
-bool operator!=(const s_rule& a, const s_rule& b)
-{
-	return !(a==b);
-}
-
 int s_rule::get_dot() const
 {
 	return this->dot;
@@ -97,6 +43,7 @@ std::string s_rule::to_string() const
 	return s;
 
 }
+
 std::ostream& operator<<(std::ostream &s,const s_rule &a)
 {
 	s<<a.to_string();

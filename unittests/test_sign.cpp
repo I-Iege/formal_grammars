@@ -6,7 +6,7 @@ TEST(TEST_SIGN, sign1 ) {
     sign S("S", false);
     sign s("S", true);
     
-    EXPECT_FALSE( s != S );
+    EXPECT_TRUE( s == S );
     
     sign S2("S", false);
     sign s2("s", false);

@@ -11,11 +11,11 @@ pip install conan==1.59
 
 ###  Windows
 ````
-conan install . --build missing -if build/vs2022-debug
+conan install . --build missing -pr vs2022-debug -if build/vs2022-debug
  ````
 ###  Linux
 ````
-conan install . --build missing -if build/gcc-debug
+conan install . --build missing -pr gcc-debug -if build/gcc-debug
  ````
 ## 3. Build
 ### Windows

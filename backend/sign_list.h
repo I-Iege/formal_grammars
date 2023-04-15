@@ -1,6 +1,7 @@
 #pragma once
 
 #include "sign.h"
+#include <initializer_list>
 
 class sign_list : public std::deque<sign>
 {
@@ -17,6 +18,7 @@ public:
 	sign_list::const_iterator end() const;
     */
 	sign_list();
+    sign_list(std::initializer_list<sign> init);
     /*
     sign_list(const sign_list& a);
 	sign& operator[](const int&);
@@ -38,11 +40,11 @@ public:
     sign_list::iterator erase(const sign&);
 
 
-  //  auto operator<=>(const sign_list& other) = default;
+    auto operator<=>(const sign_list& a) const = default;
 
-    bool friend operator<(const sign_list&,const sign_list&);
-	friend bool operator==(const sign_list &a, const sign_list &b);
-    friend bool operator!=(const sign_list &a, const sign_list &b);
+    /* bool friend operator<(const sign_list&, const sign_list&);
+    friend bool operator==(const sign_list& a, const sign_list& b);
+    friend bool operator!=(const sign_list &a, const sign_list &b);*/
 
 	std::string to_string() const;	
 	friend std::ostream& operator<<(std::ostream &s,sign_list a);

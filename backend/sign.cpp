@@ -39,14 +39,6 @@ sign &sign::operator=(const sign &a) {
   return *this;
 }
 
-bool operator==(const sign &a, const sign &b) { return a.str == b.str; }
-
-bool operator!=(const sign &a, const sign &b) { return !(a.str == b.str); }
-
-bool operator<(const sign &a, const sign &b) { return a.str < b.str; }
-
-bool operator>(const sign &a, const sign &b) { return a.str > b.str; }
-
 std::ostream &operator<<(std::ostream &s, sign a) {
   s << a.to_string();
   return s;

@@ -2,7 +2,12 @@
 
 using namespace std::ranges;
 
-sign_list::sign_list()
+ sign_list::sign_list()
+{
+}
+
+sign_list::sign_list(std::initializer_list<sign> init)
+    : std::deque<sign>(init)
 {
 }
 
@@ -28,16 +33,6 @@ sign_list::iterator sign_list::erase(const sign &a)
 	return it;
 }
 
-bool operator==(const sign_list &a, const sign_list &b)
-{
-    return a==b;
-}
-
-bool operator!=(const sign_list &a, const sign_list &b)
-{
-    return a!=b;
-}
-
 std::string sign_list::to_string() const
 {
 	std::string s="";
@@ -48,16 +43,10 @@ std::string sign_list::to_string() const
 	return s;
 }
 
-bool operator<(const sign_list& a,const sign_list& b)
-{
-    return a<b;
-}
-
 std::ostream& operator<<(std::ostream &s,sign_list a)
 {
 	s<<a.to_string();
 	return s;
 }
-
 
 
