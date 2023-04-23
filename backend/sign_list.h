@@ -24,7 +24,7 @@ public:
     sign_list::iterator erase(const sign&);
 
 
-    constexpr auto operator<=>(const sign_list& a) const = default;
+	auto operator<=>(const sign_list& a) const = default;
 
 	std::string to_string() const;	
 	friend std::ostream& operator<<(std::ostream &s,sign_list a);

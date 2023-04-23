@@ -35,7 +35,7 @@ public:
     void find_derivables();
     void rename();
 
-    constexpr auto operator<=>(const grammar& a) const = default;
+    auto operator<=>(const grammar& a) const = default;
 
 private:
 

@@ -33,6 +33,15 @@ qt_import_plugins(${TARGET}
    INCLUDE Qt6::QWindowsIntegrationPlugin Qt6::QMinimalIntegrationPlugin
 )
 
+else()
+
+target_link_libraries(${TARGET} PUBLIC 
+    Qt6::QXcbIntegrationPlugin Qt6::XcbQpaPrivate
+)
+
+qt_import_plugins(${TARGET}
+   INCLUDE Qt6::QXcbIntegrationPlugin
+)
 endif()
 
 set_target_properties(${TARGET} PROPERTIES

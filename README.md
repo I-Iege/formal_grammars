@@ -15,7 +15,9 @@ conan install . --build missing -pr vs2022-debug -if build/vs2022-debug
  ````
 ###  Linux
 ````
-conan install . --build missing -pr gcc-debug -if build/gcc-debug
+pip install conan==1.59
+export NOT_ON_C3I=1
+conan install . --build missing -pr gcc-debug -if build/gcc-debug -c  tools.system.package_manager:mode=install
  ````
 ## 3. Build
 ### Windows
