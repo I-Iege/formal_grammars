@@ -1,5 +1,9 @@
 # Formal Languages
 
+## supported platforms
+
+The code is tested in windows 10 and ubuntu 22.10
+
 ## 1. Prerequisites
 
 ### install conan
@@ -9,15 +13,28 @@ pip install conan==1.59
 
 ## 2. Download dependencies
 
+### install profiles for conan
+````
+conan config install profiles -tf profiles
+````
+
 ###  Windows
 ````
 conan install . --build missing -pr vs2022-debug -if build/vs2022-debug
  ````
 ###  Linux
+First it is recommended to run the install step with admin rights to be able to install external dependencies
+
 ````
-pip install conan==1.59
+sudo su
 export NOT_ON_C3I=1
 conan install . --build missing -pr gcc-debug -if build/gcc-debug -c  tools.system.package_manager:mode=install
+ ````
+after that it is enough to run:
+
+````
+export NOT_ON_C3I=1
+conan install . --build missing -pr gcc-debug -if build/gcc-debug
  ````
 ## 3. Build
 ### Windows
