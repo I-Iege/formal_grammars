@@ -1,5 +1,7 @@
 #include "pd_to_gr.h"
 
+import formal_languages;
+
 pd_to_gr::pd_to_gr(const push_down& pd)
 {
     grammar g;

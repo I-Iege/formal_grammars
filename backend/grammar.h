@@ -4,6 +4,8 @@
 #include <exception>
 #include <set>
 #include <vector>
+#include <map>
+#include <list>
 
 /*
 #ifdef BUILDING_DLL
