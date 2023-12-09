@@ -1,4 +1,7 @@
 #include "grammar.h"
+#include <iostream>
+#include <fstream>
+#include <sstream>
 
 grammar::grammar() {}
 grammar::grammar(const char* fname)

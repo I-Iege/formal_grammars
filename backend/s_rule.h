@@ -1,6 +1,8 @@
 #pragma once
 
+#include <string>
 #include "sign_list.h"
+import formal_languages;
 
 class s_rule
 {

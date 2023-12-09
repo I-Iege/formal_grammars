@@ -1,4 +1,6 @@
 #include "sign_list.h"
+#include <algorithm>
+#include <ranges>
 
 using namespace std::ranges;
 

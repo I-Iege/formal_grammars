@@ -1,6 +1,6 @@
 #pragma once
 
-#include "sign.h"
+import formal_languages;
 
 struct move
 {

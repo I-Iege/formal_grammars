@@ -1,5 +1,6 @@
 #include <gtest/gtest.h>
-#include "sign.h"
+
+import formal_languages;
 
 TEST(TEST_SIGN, sign1)
 {

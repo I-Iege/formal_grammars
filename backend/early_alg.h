@@ -3,6 +3,7 @@
 #include "grammar_alg.h"
 #include "grammar.h"
 
+import formal_languages;
 
 class early_alg : public grammar_alg
 {

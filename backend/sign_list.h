@@ -1,7 +1,10 @@
 #pragma once
 
-#include "sign.h"
 #include <initializer_list>
+#include <deque>
+#include <string>
+
+import formal_languages;
 
 class sign_list : public std::deque<sign>
 {

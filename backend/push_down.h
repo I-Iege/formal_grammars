@@ -4,6 +4,11 @@
 #include "move.h"
 #include "result.h"
 #include <set>
+#include <map>
+#include <list>
+
+import formal_languages;
+
 struct push_down
 {
     std::map<move,std::list<result> > M;
