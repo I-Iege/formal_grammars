@@ -1,15 +1,23 @@
 #pragma once
+#include <string>
 
-import formal_languages;
+export module formal_languages:move;
 
-struct move
+import :sign;
+
+export struct move
 {
     sign stack;
     sign c_state;
     sign c_terminal;
-    move(const sign& s1,const sign& s2,const sign& s3) :stack(s1) , c_state(s2) , c_terminal(s3)
+    move(const sign& s1,const sign& s2,const sign& s3)
+        : stack(s1)
+        , c_state(s2)
+        , c_terminal(s3)
     {}
-    move(const sign& s1,const sign& s2):stack(s1) , c_state(s2)
+    move(const sign& s1,const sign& s2)
+        :stack(s1)
+        , c_state(s2)
     {
         sign tmp ("e");
         c_terminal=tmp;

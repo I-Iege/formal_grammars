@@ -2,7 +2,6 @@
 
 #include "grammar_alg.h"
 #include "push_down.h"
-#include "grammar.h"
 
 class pd_to_gr :public grammar_alg
 {

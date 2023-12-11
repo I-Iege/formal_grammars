@@ -1,6 +1,5 @@
 #pragma once
 
-#include "sign_list.h"
 #include "move.h"
 #include "result.h"
 #include <set>

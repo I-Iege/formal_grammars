@@ -2,7 +2,8 @@
 
 #include "grammar_alg.h"
 #include "push_down.h"
-#include "grammar.h"
+
+import formal_languages;
 
 class gr_to_pd : public grammar_alg
 {
