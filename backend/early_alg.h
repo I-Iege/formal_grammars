@@ -1,7 +1,6 @@
 #pragma once
 
 #include "grammar_alg.h"
-#include "grammar.h"
 
 import formal_languages;
 

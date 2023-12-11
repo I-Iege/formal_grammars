@@ -1,4 +1,5 @@
 #include "greibach.h"
+#include <string>
 
 greibach::greibach(const grammar& gr)
 {

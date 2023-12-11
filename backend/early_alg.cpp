@@ -1,4 +1,5 @@
 #include "early_alg.h"
+#include <string>
 
 void early_alg::step1()
 {
