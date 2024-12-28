@@ -6,7 +6,7 @@
 		"patch": 0
 	},
 	"configurePresets": [{
-			"name": "gcc-release",
+			"name": "gcc-12-release",
 			"binaryDir": "${sourceDir}/build/${presetName}",
 			"cacheVariables": {
 				"CMAKE_CXX_COMPILER": "g++",
@@ -17,7 +17,29 @@
 			}
 		},
 		{
-			"name": "gcc-debug",
+			"name": "gcc-14-release",
+			"binaryDir": "${sourceDir}/build/${presetName}",
+			"cacheVariables": {
+				"CMAKE_CXX_COMPILER": "g++",
+				"CMAKE_C_COMPILER": "gcc",
+				"CMAKE_BUILD_TYPE": "Release",
+				"CMAKE_MODULE_PATH": "${sourceDir}/build/${presetName}",
+				"CMAKE_PREFIX_PATH": "${sourceDir}/build/${presetName}"
+			}
+		},
+		{
+			"name": "gcc-14-debug",
+			"binaryDir": "${sourceDir}/build/${presetName}",
+			"cacheVariables": {
+				"CMAKE_CXX_COMPILER": "g++",
+				"CMAKE_C_COMPILER": "gcc",
+				"CMAKE_BUILD_TYPE": "Debug",
+				"CMAKE_MODULE_PATH": "${sourceDir}/build/${presetName}",
+				"CMAKE_PREFIX_PATH": "${sourceDir}/build/${presetName}"
+			}
+		},
+		{
+			"name": "gcc-12-debug",
 			"binaryDir": "${sourceDir}/build/${presetName}",
 			"cacheVariables": {
 				"CMAKE_CXX_COMPILER": "g++",
@@ -107,13 +129,23 @@
 		}
 	],
 	"buildPresets": [{
-			"name": "gcc-release",
-			"configurePreset": "gcc-release",
+			"name": "gcc-12-release",
+			"configurePreset": "gcc-12-release",
 			"configuration": "Release"
 		},
 		{
-			"name": "gcc-debug",
-			"configurePreset": "gcc-debug",
+			"name": "gcc-12-debug",
+			"configurePreset": "gcc-12-debug",
+			"configuration": "Debug"
+		},
+		{
+			"name": "gcc-14-release",
+			"configurePreset": "gcc-14-release",
+			"configuration": "Release"
+		},
+		{
+			"name": "gcc-14-debug",
+			"configurePreset": "gcc-14-debug",
 			"configuration": "Debug"
 		},
 		{
@@ -148,13 +180,23 @@
 		}
 	],
 	"testPresets": [{
-			"name": "gcc-release",
-			"configurePreset": "gcc-release",
+			"name": "gcc-12-release",
+			"configurePreset": "gcc-12-release",
 			"configuration": "Release"
 		},
 		{
-			"name": "gcc-debug",
-			"configurePreset": "gcc-debug",
+			"name": "gcc-12-debug",
+			"configurePreset": "gcc-12-debug",
+			"configuration": "Debug"
+		},
+		{
+			"name": "gcc-14-release",
+			"configurePreset": "gcc-14-release",
+			"configuration": "Release"
+		},
+		{
+			"name": "gcc-14-debug",
+			"configurePreset": "gcc-14-debug",
 			"configuration": "Debug"
 		},
 		{
