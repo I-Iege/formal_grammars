@@ -20,21 +20,19 @@ conan config install profiles -tf profiles
 
 ###  Windows
 ````
-conan install . --build missing -pr vs2022-debug -if build/vs2022-debug
+ conan install . --build missing -pr:a vs2022-debug -of=build/vs2022-debug
  ````
 ###  Linux
 First it is recommended to run the install step with admin rights to be able to install external dependencies
+Depending on your gcc version this can be either gcc-12-debug or gcc-14-debug
 
 ````
-sudo su
-export NOT_ON_C3I=1
-conan install . --build missing -pr gcc-debug -if build/gcc-debug -c  tools.system.package_manager:mode=install
+conan install . --build missing -pr:a gcc-12-debug -of=build/gcc-12-debug
  ````
 after that it is enough to run:
 
 ````
-export NOT_ON_C3I=1
-conan install . --build missing -pr gcc-debug -if build/gcc-debug
+conan install . --build missing -pr:a gcc-12-debug -of build/gcc-12-debug
  ````
 ## 3. Build
 ### Windows
@@ -44,8 +42,8 @@ cmake --build --preset vs2022-debug
 ````
 ### Linux
 ````
-cmake --preset gcc-debug
-cmake --build --preset gcc-debug
+cmake --preset gcc-12-debug
+cmake --build --preset gcc-12-debug
 ````
 ## 4. Test
 ### Windows
@@ -54,5 +52,5 @@ ctest --preset vs2022-debug
 ````
 ### Linux
 ````
-ctest --preset gcc-debug
+ctest --preset gcc-12-debug
 ````
